@@ -5,6 +5,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Encriptador de Texto</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body>
@@ -22,8 +24,12 @@
 
                 <label for="textoIngresado">Ingrese aquí su texto:</label>
                 <textarea  id="textoIngresado" cols="30" rows="10"placeholder="Solo letras minúsuculas y sin acentos."></textarea>
-                <button id="encriptar">Encriptar</button>
-                <button id="desencriptar">Desencriptar</button>
+                
+                <div class="seccionBotonesEncriptado">
+                    <button id="encriptar">Encriptar</button>
+                    <button id="desencriptar">Desencriptar</button>
+                </div>
+                
 
             </section>
 
@@ -31,7 +37,10 @@
 
                 <label for="encriptado">Resultado de la encriptacion:</label>
                 <textarea id="encriptado" cols="30" rows="10" placeholder="Ningun mensaje fue encontrado"></textarea>
-                <button id="copiar">Copiar</button>
+
+                <div class="seccionBotonCopiar">
+                    <button id="copiar">Copiar</button>
+                </div>
 
             </section>
 
