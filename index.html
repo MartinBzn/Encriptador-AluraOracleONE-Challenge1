@@ -5,16 +5,24 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Encriptador de Texto</title>
-        <link rel="stylesheet" href="css/reset.css">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+        <link rel="icon" href="img/favicon.png">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Square+Peg&display=swap" rel="stylesheet">
     </head>
 
     <body>
 
         <header>
-
-            <h1>Encriptador de Texto</h1>
-            <h2>Alura Oracle ONE - Challenge 1</h2>
+            <div class="imagenLogo">
+                <img src="img/Vector.png" alt="Logo Alura" class="logoAlura">
+            </div>
+            <div class="tituloPagina">
+                <h1>Encriptador de Texto</h1>
+                <h2>Alura Oracle ONE - Challenge 1</h2>
+            </div>
 
         </header>
 
@@ -23,11 +31,11 @@
             <section class="ingresoTexto">
 
                 <label for="textoIngresado">Ingrese aquí su texto:</label>
-                <textarea  id="textoIngresado" cols="30" rows="10"placeholder="Solo letras minúsuculas y sin acentos."></textarea>
+                <textarea  id="textoIngresado" cols="30" rows="10"placeholder="Solo letras minúsuculas y sin acentos." class="areaTexto"></textarea>
                 
                 <div class="seccionBotonesEncriptado">
-                    <button id="encriptar">Encriptar</button>
-                    <button id="desencriptar">Desencriptar</button>
+                    <button id="encriptar" class="botones">Encriptar</button>
+                    <button id="desencriptar" class="botones">Desencriptar</button>
                 </div>
                 
 
@@ -36,10 +44,10 @@
             <section class="resultado">
 
                 <label for="encriptado">Resultado de la encriptacion:</label>
-                <textarea id="encriptado" cols="30" rows="10" placeholder="Ningun mensaje fue encontrado"></textarea>
+                <textarea id="encriptado" cols="30" rows="10" placeholder="Ningun mensaje fue encontrado" class="areaTexto"></textarea>
 
                 <div class="seccionBotonCopiar">
-                    <button id="copiar">Copiar</button>
+                    <button id="copiar" class="botones">Copiar</button>
                 </div>
 
             </section>
