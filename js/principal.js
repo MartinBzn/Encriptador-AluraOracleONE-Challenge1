@@ -31,6 +31,7 @@ function realizarReemplazos(textoAReemplazar,reemplazables,reemplazos){
     if (validarTexto(textoAReemplazar.value)){
         textoProcesado = (textoAReemplazar.value).replaceAll(reemplazables[1],reemplazos[1]).replaceAll(reemplazables[2],reemplazos[2]).replaceAll(reemplazables[0],reemplazos[0]).replaceAll(reemplazables[3],reemplazos[3]).replaceAll(reemplazables[4],reemplazos[4]);
         respuesta.value = textoProcesado;
+        respuesta.focus()
     }else{
         esMayusculaOAcentuada();
     }

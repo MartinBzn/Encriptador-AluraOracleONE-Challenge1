@@ -15,9 +15,10 @@ html{
 /* header */
 
 body{
-    background: linear-gradient(to bottom right, rgb(43, 43, 185), rgb(40, 140, 173));
+    background: linear-gradient(to bottom right, rgb(40, 140, 173), rgb(43, 43, 185), rgb(40, 140, 173));
     margin: 0;
     padding: 0;
+    height: 800px;
 }
 
 header{
@@ -26,6 +27,7 @@ header{
     justify-content: space-around;
     align-items: center;
     background-color: rgba(255,255,255,0.05);
+    height: 12%;
 }
 
 .tituloPagina h1{
@@ -40,6 +42,10 @@ header{
 
 /* --------------------------------------------- */
 /* main */
+
+main{
+    height: 76%;
+}
 
 label{
     width: 100%;
@@ -61,7 +67,8 @@ label{
     color: rgb(18, 4, 93);
     font-weight: bold;
     background-color: rgb(200, 200, 244);
-
+    resize: vertical;
+    height:fit-content;
 }
 
 .areaTexto:focus{
@@ -74,7 +81,7 @@ label{
 }
 
 .botones {
-    width: 150px;
+    width: 50%;
     border: 1px solid rgb(40, 140, 173);
     padding: 10px;
     border-radius: 10px;
@@ -100,11 +107,84 @@ label{
 footer{
     background-color: rgba(255,255,255,0.2);
     margin: 10px auto 0;
-    float:inline-end;
+    /* float:inline-end; */
+    height: 12%;
 }
 
 footer p{
     margin: 10px auto;
     padding: 10px;
     font-size: 0.9em;
+}
+
+/* --------------------------------------------- */
+/* Responsive para Tablet */
+
+@media screen and (min-width: 480px){
+
+    header{
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+    }
+
+    .imagenLogo{
+        margin: 1% 2% 1% 6%;
+    }
+
+    .tituloPagina{
+        display: flex;
+        align-items:center;
+        width: 90%;
+    }
+
+    .tituloPagina h1, .tituloPagina h2{
+        margin: 2% 0;
+        height: 100%;
+        text-align: justify;
+        /* font-size: 1.5em; */
+    }
+
+    /* .tituloPagina{
+        
+    } */
+
+    .tituloPagina h2{
+        margin-left: 2%;
+        font-size: 1.5em;
+    }
+
+    .botones{
+        width: 40%;
+    }
+}
+
+/* --------------------------------------------- */
+/* Responsive para Tablet */
+
+@media screen and (min-width: 1024px){
+
+    /* body{
+        height: 800px;
+    } */
+
+    main{
+        display: flex;
+    }
+
+    .ingresoTexto{
+        width: 60%;
+        height: 650px;
+    }
+
+    .resultado{
+        width: 40%;
+        height: 600px;
+    }
+
+    .areaTexto{
+        height: 70%;
+    }
+
 }
