@@ -4,10 +4,16 @@ var botonEncriptar=document.getElementById("encriptar");
 var botonDesencriptar = document.getElementById("desencriptar");
 var botonCopiar = document.getElementById("copiar");
 const letras=['a','e','i','o','u'];
-const cambio=['ai','enter','imes','ober','ufat'];  
+const cambio=['ai','enter','imes','ober','ufat'];
+var ventanaError = document.getElementById("ventana-dialogo");
+var botonCerrarVentana = document.getElementById("cerrar-ventana");  
 
 function esMayusculaOAcentuada(){
-    alert('Solo se permiten minúsuculas y sin acento.');
+   
+    ventanaError.showModal();
+    botonCerrarVentana.addEventListener('click',function(){
+        ventanaError.close();
+    })
     texto.focus();
     return false;
 }

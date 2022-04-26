@@ -101,6 +101,38 @@ label{
     cursor: pointer;
 }
 
+#ventana-dialogo::backdrop {
+    background: rgba(0,0,0,.4);
+  }
+  
+  #cerrar-ventana {
+    background-color: #67C3E6;
+    color: #161616;
+    border: none;
+    padding: .7rem 1.4rem;
+    font-size: 1rem;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  
+  #cerrar-ventana:hover {
+    background-color: #43AED6;
+    transition: .2s ease-in;
+  }
+  
+  #ventana-dialogo {
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.9);
+  }
+
+  .mensaje-ventana{
+      font-size: 1em;
+      color: black;
+      z-index: 999;
+  }
+
 /* --------------------------------------------- */
 /* footer */
 
@@ -171,6 +203,11 @@ footer p{
 
     main{
         display: flex;
+        font-size: 1.5em;
+    }
+
+    .tituloPagina{
+        font-size: 1.3em;
     }
 
     .ingresoTexto{
@@ -179,12 +216,20 @@ footer p{
     }
 
     .resultado{
-        width: 40%;
-        height: 600px;
+        width: 45%;
+        height: 650px;
+    }
+
+    textarea{
+        font-size: 1em;
     }
 
     .areaTexto{
-        height: 70%;
+        height: 65%;
+    }
+
+    .botones{
+        font-size: 1em;
     }
 
 }
