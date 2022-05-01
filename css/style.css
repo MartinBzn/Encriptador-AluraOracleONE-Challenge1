@@ -19,6 +19,8 @@ body{
     margin: 0;
     padding: 0;
     height: 800px;
+    display: grid;
+    grid-template-rows: 12% 76% 12%;
 }
 
 header{
@@ -27,7 +29,7 @@ header{
     justify-content: space-around;
     align-items: center;
     background-color: rgba(255,255,255,0.05);
-    height: 12%;
+    grid-row: 1;
 }
 
 .tituloPagina h1{
@@ -44,7 +46,7 @@ header{
 /* main */
 
 main{
-    height: 76%;
+    grid-row: 2;
 }
 
 label{
@@ -58,8 +60,15 @@ label{
     padding: 10px;
 }
 
+.encriptado-vacio{
+    background-size: auto 70%;
+    background-repeat:no-repeat;
+    background-image: url(../img/Muñeco.png);
+    background-position: center 70%;
+}
+
 .areaTexto{
-    margin: 10px auto;
+    margin: 7px auto;
     border-radius: 10px;
     text-align: left;
     padding: 5px;
@@ -69,6 +78,8 @@ label{
     background-color: rgb(200, 200, 244);
     resize: vertical;
     height:fit-content;
+    border: 7px double rgb(18, 4, 93);
+    box-shadow: 10px 10px 10px -1px black;
 }
 
 .areaTexto:focus{
@@ -93,7 +104,7 @@ label{
   
 }
   
-.botones:hover, .botonoes:focus {
+.botones:hover {
     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2),
       0 4px 5px 0 rgba(0, 0, 0, 0.14),
       0 1px 10px 0 rgba(0, 0, 0, 0.12);
@@ -103,50 +114,42 @@ label{
 
 #ventana-dialogo::backdrop {
     background: rgba(0,0,0,.4);
-  }
-  
-  #cerrar-ventana {
-    background-color: #67C3E6;
-    color: #161616;
-    border: none;
-    padding: .7rem 1.4rem;
-    font-size: 1rem;
-    border-radius: 7px;
-    cursor: pointer;
-  }
-  
-  #cerrar-ventana:hover {
-    background-color: #43AED6;
-    transition: .2s ease-in;
-  }
-  
-  #ventana-dialogo {
-    border: none;
+    backdrop-filter: blur(3px);
+}
+
+#ventana-dialogo {
+    border: 7px double rgb(18, 4, 93);
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.9);
-  }
+    box-shadow: 10px 10px 10px -1px black;
+    background-color: rgb(40, 140, 173);
+    
+}
 
-  .mensaje-ventana{
+.mensaje-ventana{
       font-size: 1em;
-      color: black;
+      color: white;
       z-index: 999;
-  }
+}
 
 /* --------------------------------------------- */
 /* footer */
 
 footer{
+    grid-row: 3;
     background-color: rgba(255,255,255,0.2);
-    margin: 10px auto 0;
-    /* float:inline-end; */
-    height: 12%;
+    padding: 10px;
+}
+
+.iconos{
+    margin: auto 5px;
 }
 
 footer p{
-    margin: 10px auto;
-    padding: 10px;
+    margin: 2px auto;
     font-size: 0.9em;
+    color: black;
+    font-weight: bold;
 }
 
 /* --------------------------------------------- */
@@ -155,7 +158,6 @@ footer p{
 @media screen and (min-width: 480px){
 
     header{
-        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: stretch;
@@ -175,12 +177,7 @@ footer p{
         margin: 2% 0;
         height: 100%;
         text-align: justify;
-        /* font-size: 1.5em; */
     }
-
-    /* .tituloPagina{
-        
-    } */
 
     .tituloPagina h2{
         margin-left: 2%;
@@ -193,13 +190,13 @@ footer p{
 }
 
 /* --------------------------------------------- */
-/* Responsive para Tablet */
+/* Responsive para Monitor */
 
 @media screen and (min-width: 1024px){
 
-    /* body{
-        height: 800px;
-    } */
+    *{
+        font-size: 16px;
+    }
 
     main{
         display: flex;
@@ -212,12 +209,12 @@ footer p{
 
     .ingresoTexto{
         width: 60%;
-        height: 650px;
+        height: 100%;
     }
 
     .resultado{
         width: 45%;
-        height: 650px;
+        height: 100%;
     }
 
     textarea{
@@ -225,7 +222,7 @@ footer p{
     }
 
     .areaTexto{
-        height: 65%;
+        height: 80%;
     }
 
     .botones{

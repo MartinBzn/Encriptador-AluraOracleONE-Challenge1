@@ -1,12 +1,13 @@
 var texto = document.getElementById("textoIngresado");
 var respuesta = document.getElementById("encriptado");
-var botonEncriptar=document.getElementById("encriptar");
+var botonEncriptar = document.getElementById("encriptar");
 var botonDesencriptar = document.getElementById("desencriptar");
 var botonCopiar = document.getElementById("copiar");
-const letras=['a','e','i','o','u'];
-const cambio=['ai','enter','imes','ober','ufat'];
+const letras = ['a','e','i','o','u'];
+const cambio = ['ai','enter','imes','ober','ufat'];
 var ventanaError = document.getElementById("ventana-dialogo");
-var botonCerrarVentana = document.getElementById("cerrar-ventana");  
+var botonCerrarVentana = document.getElementById("cerrar-ventana");
+
 
 function esMayusculaOAcentuada(){
    
@@ -36,8 +37,9 @@ function realizarReemplazos(textoAReemplazar,reemplazables,reemplazos){
     var textoProcesado ='';
     if (validarTexto(textoAReemplazar.value)){
         textoProcesado = (textoAReemplazar.value).replaceAll(reemplazables[1],reemplazos[1]).replaceAll(reemplazables[2],reemplazos[2]).replaceAll(reemplazables[0],reemplazos[0]).replaceAll(reemplazables[3],reemplazos[3]).replaceAll(reemplazables[4],reemplazos[4]);
+        respuesta.focus();
         respuesta.value = textoProcesado;
-        respuesta.focus()
+        
     }else{
         esMayusculaOAcentuada();
     }
@@ -55,8 +57,17 @@ function copiarAlPortapapeles(){
     respuesta.select();
     document.execCommand('copy');
     window.alert('Elemento copiado al portapapeles')
+    texto.focus();
+    respuesta.value='';
 }
-        
+
 botonEncriptar.onclick = encriptar;
 botonDesencriptar.onclick = desencriptar;
 botonCopiar.onclick = copiarAlPortapapeles;
+
+respuesta.addEventListener('blur',function(event){
+    this.classList.add('encriptado-vacio');
+})
+respuesta.addEventListener('focus',function(event){
+    this.classList.remove('encriptado-vacio');
+})
